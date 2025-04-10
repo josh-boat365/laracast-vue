@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Basics - Vue3</title>
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model="greeting" placeholder="Type your greeting here" /> <!-- Two-way data binding with v-model -->
+        <h3>Input: {{ greeting }}</h3> <!-- This will show the greeting string -->
+        <h3>Length of Text: {{ greeting.length }}</h3>
+    </div>
+
+
+
+
+    <script>
+        Vue.createApp({
+
+            data(){ //method to return data
+                // data is a function that returns an object
+                return {
+                    greeting: ''
+                };
+            }
+        }).mount('#app');
+    </script>
+</body>
+</html>
